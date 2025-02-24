@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy JAR app to Azure Web App - Tekeksamen
+name: Build and deploy JAR app to Azure Web App - TekEksamen
 
 on:
   push:
@@ -52,15 +52,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_94D5AB20DF6F4BD29533FDFF4550023F }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C3CDB876442247A28CDFB1984B7A0237 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_162235C4C2F6439DAD4932D086B8FE89 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_84811727343440AD96C76A6B16E1DB32 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_3B444F70EA724FEB89C490DE2CD02D27 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_84E4549C6AA14567A1B48CEB492CBE84 }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'Tekeksamen'
+          app-name: 'TekEksamen'
           slot-name: 'Production'
           package: '*.jar'
           
